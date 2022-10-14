@@ -19,6 +19,7 @@ public class Commit {
      * variable is used. We've provided one example for `message`.
      */
 
+
     /** The message of this Commit. */
     private String message;
 
