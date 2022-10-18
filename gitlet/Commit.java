@@ -22,6 +22,32 @@ public class Commit {
 
     /** The message of this Commit. */
     private String message;
+    private String timestamp;
+    // something that keeps track of what files this commit is tracking
+    private Commit parent;
+    // some other stuff?
+
+    public Commit(String message, Commit parent) {
+        this.message = message;
+        this.parent = parent;
+        if (parent == null) {
+            this.timestamp = "00:00:00 UTC, Thursday, 1 January 1970";
+        }
+    }
 
     /* TODO: fill in the rest of this class. */
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public String getTimestamp() {
+        return this.timestamp;
+    }
+
+    public Commit getParent() {
+        return this.parent;
+    }
+
+
 }
