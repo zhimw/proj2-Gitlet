@@ -38,6 +38,6 @@ To store gitlet commands.
      - Staging/ -- the folder for data to be staged before a commit
           - Addition/ - the folder for addition, has blobs that needs to be added
           - Removal/ - the folder for removal, has blobs that needs to be removed
-      - Branches/ -- the folder for all the branches, with the default branch to be master
+     - Branches/ -- the folder for all the branches, with the default branch to be master
           - master -- the file that stores the commits inside the master branch
 
