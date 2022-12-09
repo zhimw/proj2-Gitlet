@@ -1,6 +1,6 @@
 # proj2-Gitlet
 
-# Gitlet Design Document
+# Gitlet Design Document (in Progress)
 
 **Name**: Zhimei Wang
 
