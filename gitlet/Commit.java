@@ -2,6 +2,10 @@ package gitlet;
 
 // TODO: any imports you need here
 
+import java.io.File;
+import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date; // TODO: You'll likely use this in this class
 
 /** Represents a gitlet commit object.
@@ -10,7 +14,7 @@ import java.util.Date; // TODO: You'll likely use this in this class
  *
  *  @author TODO
  */
-public class Commit {
+public class Commit implements Serializable {
     /**
      * TODO: add instance variables here.
      *
@@ -24,13 +28,14 @@ public class Commit {
     private String message;
     private String timestamp;
     // something that keeps track of what files this commit is tracking
-    private Commit parent;
+    private String parent;
+    private String[] fileNames;
     // some other stuff?
 
-    public Commit(String message, Commit parent) {
+    public Commit(String message, String parent) {
         this.message = message;
         this.parent = parent;
-        if (parent == null) {
+        if (this.parent == null) {
             this.timestamp = "00:00:00 UTC, Thursday, 1 January 1970";
         }
     }
@@ -45,9 +50,12 @@ public class Commit {
         return this.timestamp;
     }
 
-    public Commit getParent() {
+    public String getParent() {
         return this.parent;
     }
+
+    public String[] getFiles() { return this.fileNames; }
+
 
 
 }
